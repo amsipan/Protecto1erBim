@@ -87,10 +87,12 @@
 .mt-2       {      margin-top: 10px;        }
 .mt-3       {      margin-top: 15px;        }
 
-
 /* Borders */
 .rounded { border-radius: 10px; }
 .bd-none { border: none;        }
+
+/* ANCHORE DECORATION */
+.a-decoration-none { text-decoration: none; }
 
 /* RESPONSIVE PC */
 @media (min-width: 1024px) {
