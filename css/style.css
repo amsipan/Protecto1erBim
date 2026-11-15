@@ -12,6 +12,7 @@
     --text-color: #000000;
     --warning-color: #b30418;
     --warning-area-color: #eebdc2;
+    --correct-color: #87cfb5e0;
     --table-head-bg:   var(--terciary-color);
     --table-stripe-bg: var(--terciary-color);
 
@@ -227,6 +228,17 @@ div input:read-only{
     user-select: none;
     pointer-events: none;
 }
+
+div input:valid     {       color: var(--text-color);    }
+div input:invalid   {       color: var(--warning-color);    }
+
+div input:focus-visible,
+div select:focus-visible,
+div textarea:focus-visible {
+    outline: 2px solid var(--terciary-color);
+    outline-offset: 1px;
+}
+
 
 /* Anchore visited */
 div .olvido-contraseña:visited {
