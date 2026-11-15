@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+
+:root {
+    /* Colors */
+    --primary-color: #0C4B3C;
+    --secondary-color: #F2F2F2;
+    --terciary-color: #229da5;
+    --grey-color: #5d5a5a;
+    --text-color: #000000;
+    --warning-color: #b30418;
+    
+    /* Text font size */
+    --title-xl: 30px;
+
+    /* Font family */
+    --font-family: 'Plus Jakarta Sans', sans-serif;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+}
+
+/* TEXT COLOR */
+
+.primary-color      {   color: var(--primary-color);    }
+.secondary-color    {   color: var(--secondary-color);  }
+.terciary-color     {   color: var(--terciary-color);   }
+.warning-color      {   color: var(--warning-color);    }
+
+/* BACKGROUND COLORS */
+.bg-primary-color   {   background-color: var(--primary-color);     }
+.bg-secondary-color {   background-color: var(--secondary-color);   }
+.bg-terciary-color  {   background-color: var(--terciary-color);    }
+
+
+/* TIPOGRAFIA */
+.font-family        {   font-family: var(--font-family);    }
+.text-center        {   text-align: center;                 }
+.text-pretty        {   text-wrap: pretty;                   }
+.title-xl           {   font-size: var(--title-xl);         }
+
+/* DISPLAY */
+.d-flex             {   display: flex;  }
+.d-grid             {   display: grid;  }
+.d-block            {   display: block; }
+.d-none             {   display: none;  }
+
+/* FLEX */
+
+.flex-column                {   flex-direction: column;         }
+.justify-content-center     {   justify-content: center;        }
+.justify-content-between    {   justify-content: space-between; }
+.aling-items-center         {   align-items: center;            }
+.flex-grow-1                {   flex-grow: 1;                   }
+
+/* SIZING */
+.w-100      {   width: 100%;     }
+.wv-100     {   width: 100vw;    }
+.h-100      {   height: 100%;    }
+.hv-100     {   height: 100vh;   }
+.hdv-100    {   height: 100dvh;  }
+.h-auto     {   height: auto;    }
+
+/* GAP */
+.gap-1 { gap: 5px; }
+.gap-2 { gap: 10px; }
+.gap-3 { gap: 30px; }
+
+/* PADDING */
+.p-1    {     padding: 0.5rem;        }
+.p-2    {     padding: 1rem;          }
+.p-3    {     padding: 2rem;          }
+.px-2   {     padding-inline: 1rem;   }
+.py-3   {     padding-block: 2rem;    }
+
+/* MARGIN */
+.m-1        {      margin: 5px;             }
+.m-2        {      margin: 10px;            }
+.m-3        {      margin: 15px;            }
+.mt-1       {      margin-top: 5px;         }
+.mt-2       {      margin-top: 10px;        }
+.mt-3       {      margin-top: 15px;        }
+
+
+/* Borders */
+.rounded { border-radius: 10px; }
+.bd-none { border: none;        }
+
+/* RESPONSIVE PC */
+@media (min-width: 1024px) {
+    /* DISPLAY */
+    .d-lg-block {   display: block; }
+    .d-lg-flex  {   display: flex;  }
+    .d-lg-grid  {   display: grid;  }
+
+    /* FLEX */
+    .justify-content-lg-center { justify-content: center; }
+
+    /* TIPOGRAFIA*/
+    .text-lg-center { text-align: center; }
+
+    /*PADDING*/
+    .p-lg-0  { padding: 0; }
+    .p-lg-2  { padding: 1rem; }
+    .p-lg-3  { padding: 2rem; }
+    .py-lg-0 { padding-block: 0; }
+}
+
+/* Input focus */
+div input {
+    border: 1px solid var(--grey-color);
+    padding: 0.5rem;
+}
+
+div input:focus {
+    outline: 2px solid var(--terciary-color);
+}
+
+/* Anchore visited */
+div a:visited {
+    color: var(--terciary-color);
+}
+
+
+/* MEDIA QUERYS */
+@media (min-width: 1024px) {
+
+       
+    .login-header {
+        border-bottom: 1px solid var(--text-color);
+        height: 80px;
+    }
+
+    .login-footer {
+        border-top: 1px solid var(--text-color);
+        height: 50px;
+    }
+
+    .login-main {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-rows: minmax(0, 1fr);;
+        max-width: 100vw;
+        height: calc(100vh - 145px);
+        overflow: hidden;
+    }
+    
+    .login-image-wrapper img {
+        object-fit: cover;
+    }
+
+}
