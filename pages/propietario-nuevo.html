@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Nuevo Propietario</title>
+</head>
+<body class="bg-secondary-color d-flex flex-column justify-content-between hdv-100">
+    <header class="title-xl d-flex flex-column justify-content-between aling-items-center p-2 gap-3 flex-lg-row bg-lg-cream-color">
+        <div class="d-flex gap-1 justify-content-center aling-items-center terciary-color">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-paw-print preview-icon"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></svg>
+            <h2>Huellitas</h2>
+        </div>
+        <div class="header-options text-color d-flex flex-column gap-2 justify-content-center aling-items-center w-lg-25">
+            <select name="roles" id="roles" class="w-100 rounded p-1">
+                <option value="">Recepcionitsa</option>
+                <option value="">Veterinario</option>
+                <option value="">Administrador</option>
+            </select>
+            <a href="../index.html" class="cerrar-sesion menu-button w-50 rounded p-1 aling-self-end bd-none bg-grey-color parrafo text-center a-decoration-none">Cerrar Sesión</a>
+        </div>
+    </header>
+    <main class="p-1 aling-self-lg-center w-lg-50">
+        <form action="pantalla-principal-recepcionista.html">
+            <fieldset class="form-propietario d-flex flex-column gap-2 p-2 rounded d-lg-grid">
+                <legend>Datos del propietario</legend>
+
+                <div class="d-flex flex-column gap-1">
+                    <label for="cedula">Cédula de Identidad  <span class="warning-color">*</span></label>
+                    <input id="cedula" type="text" required minlength="10" maxlength="10" title="Debe contener 10 dígitos númericos" placeholder="1700000000" pattern="[0-9]{10}">
+                    <span class="span terciary-color"> Debe contener 10 dígitos númericos </s>
+                </div>
+
+                <div class="d-flex flex-column gap-1">
+                    <label for="nombres">Nombres  <span class="warning-color">*</span></label>
+                    <input id="nombres" type="text" required minlength="2" maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}">
+                    <span class="span terciary-color"> Máximo 50 caracteres </span>
+                </div>
+
+                <div class="d-flex flex-column gap-1">
+                    <label for="apellidos">Apellidos <span class="warning-color">*</span></label>
+                    <input id="apellifos" type="text" required minlength="2" maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}">
+                    <span class="span terciary-color"> Máximo 50 caracteres </span>
+                </div>
+
+                <div class="d-flex flex-column gap-1">
+                    <label for="telefono">Teléfono de Contacto <span class="warning-color">*</span></label>
+                    <input id="telefono" type="tel" required minlength="10" maxlength="10" pattern="09[0-9]{8}" placeholder="0999999999">
+                    <span class="span terciary-color"> Debe contener 10 dígitos e inicar con 09 </span>
+                </div>
+
+                <div class="d-flex flex-column gap-1 grid-lg-full-width">
+                    <label for="email">Correo Electrónico <span class="warning-color">*</span></label>
+                    <input id="email" type="email" required placeholder="ejemplo@correo.com">
+                    <span class="span terciary-color"> Correo electrónico para comunicaciones y facturas </span>
+                </div>
+
+                <div class="d-flex flex-column gap-2 mt-2 flex-lg-row justify-content-lg-center grid-lg-full-width">
+                    <button type="submit" class="menu-button bd-none rounded p-2 bg-terciary-color secondary-color parrafo w-lg-25">Registrar</button>
+                    <a class="bg-grey-color a-decoration-none text-color p-2 text-center rounded w-lg-25" href="">Cancelar</a>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer class="p-3">
+        <p> © 2026 Clínica Veterinaria Huellitas - Sistema de Gestión Interna</p>
+    </footer>
+</body>
+</html>
