@@ -12,16 +12,20 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-paw-print preview-icon"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></svg>
             <h2>Huellitas</h2>
         </div>
-        <div class="header-options text-color d-flex flex-column gap-2 justify-content-center aling-items-center w-lg-25">
-            <select name="roles" id="roles" class="w-100 rounded p-1">
+        <div class="header-options text-color d-flex flex-column flex-lg-row gap-2 justify-content-center aling-items-center w-lg-25">
+            <select name="roles" id="roles" class="w-100 w-lg-50 rounded p-1">
                 <option value="">Recepcionitsa</option>
                 <option value="">Veterinario</option>
                 <option value="">Administrador</option>
             </select>
-            <a href="../index.html" class="cerrar-sesion menu-button w-50 rounded p-1 aling-self-end bd-none bg-grey-color parrafo text-center a-decoration-none">Cerrar Sesión</a>
+            <a href="../index.html" class="cerrar-sesion menu-button w-50 w-lg-50 rounded p-1 aling-self-end bd-none bg-grey-color parrafo text-center a-decoration-none">Cerrar Sesión</a>
         </div>
     </header>
     <main class="p-1 aling-self-lg-center w-lg-50 d-flex flex-column gap-3">
+        <div class="d-flex flex-column mb-3">
+            <h1 class="title">Eliminar Propietario</h1>
+            <p class="parrafo">Panel de Confirmación </p>
+        </div>
         <div class="bg-warning-area-color d-flex p-2 gap-2 parrafo justify-content-center aling-items-center rounded bd-warning-area">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-exclamation-point preview-icon warning-svg warning-color"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> 
             <p class="text-pretty">
@@ -29,7 +33,7 @@
                 <span class="title-bold">Está acción no se puede deshacer.</span>
             </p>
         </div>
-        <form action="pantalla-principal-recepcionista.html">
+        <form action="propietario-listar.html">
             <fieldset class="form-propietario d-flex flex-column gap-2 p-2 rounded d-lg-grid">
                 <legend>Datos del propietario</legend>
 
@@ -65,7 +69,7 @@
 
                 <div class="d-flex flex-column gap-2 mt-2 flex-lg-row justify-content-lg-center grid-lg-full-width">
                     <button type="submit" class="warning-button bd-none rounded p-2 bg-warning-color secondary-color parrafo w-lg-25">Eliminar</button>
-                    <a class="bg-grey-color a-decoration-none text-color p-2 text-center rounded w-lg-25" href="">Cancelar</a>
+                    <a class="bg-grey-color a-decoration-none text-color p-2 text-center rounded w-lg-25" href="propietario-listar.html">Cancelar</a>
                 </div>
             </fieldset>
         </form>
