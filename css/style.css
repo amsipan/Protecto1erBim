@@ -209,6 +209,7 @@
 
     /* SIZING */
     .w-lg-100   {   width: 100%;    }
+    .w-lg-75    {   width: 75%;     }
     .w-lg-50    {   width: 50%;     }
     .w-lg-25    {   width: 25%;     }
 }
@@ -229,8 +230,8 @@ div input:read-only{
     pointer-events: none;
 }
 
-div input:valid     {       color: var(--text-color);    }
-div input:invalid   {       color: var(--warning-color);    }
+div input:valid     {       outline: 2px solid var(--primary-color);    }
+div input:invalid   {       outline: 2px solid var(--warning-color);    }
 
 div input:focus-visible,
 div select:focus-visible,
@@ -239,6 +240,25 @@ div textarea:focus-visible {
     outline-offset: 1px;
 }
 
+input[type="search"]:placeholder-shown + span::before {
+    content: "Busqueda no debe ser vacia";
+    color: var(--warning-color);
+}
+
+input[type="search"]:not(:placeholder-shown) + span::before {
+    content: " ";
+    color: var(--warning-color);
+}
+
+input:placeholder-shown + span::before {
+    content: "El campo no puede estar vacio";
+    color: var(--warning-color);
+}
+
+input:not(:placeholder-shown) + span::before {
+    content: " ";
+    color: var(--warning-color);
+}
 
 /* Anchore visited */
 div .olvido-contraseña:visited {

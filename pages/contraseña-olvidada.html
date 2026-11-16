@@ -15,18 +15,18 @@
         <div class="login-layout d-flex flex-column w-100 gap-3 justify-content-lg-center p-lg-2">
             <div class="d-flex flex-column justify-content-center aling-items-center gap-2 primary-color">
                 <h1>Recuperar Contraseña</h1>
-                <p class="text-center">Ingrese su correo y le enviaremos un enlace para restablecer su contraseña</p>
+                <p class="text-center">Un administrador se pondrá en contacto con usted en los próximos minutos por medio del correo electrónico ingresado</p>
             </div>
-            <form class="">
+            <form action="../index.html">
                 <fieldset class="d-flex flex-column gap-2 p-2">
                     <legend>Credenciales</legend>
                 
                     <div class="d-flex flex-column gap-1">
                         <label for="email">Correo Electrónico <span class="warning-color">*</span> </label>
-                        <input id="email" name="email" type="email" required autocomplete="email" placeholder="ejemplo@huellitas.com">
+                        <input id="email" name="email" type="email" required autocomplete="email" placeholder="ejemplo@huellitas.com" class="rounded">
                     </div>
 
-                    <button type="submit" class="d-flex secondary-color bg-terciary-color justify-content-center aling-items-center gap-1 mt-2 bd-none p-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send preview-icon"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg> Iniciar Sesión</button>
+                    <button type="submit" class="d-flex secondary-color bg-terciary-color justify-content-center aling-items-center gap-1 mt-2 bd-none p-1 rounded"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send preview-icon"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg> Recuperar Constraseña</button>
                     <div class="d-flex justify-content-center">
                         <a class="d-flex justify-content-center aling-items-center gap-2 a-decoration-none primary-color mt-3" href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-left preview-icon"><path d="M6 8L2 12L6 16"/><path d="M2 12H22"/></svg>  Volver a inicar sesión</a>
                     </div>
@@ -37,7 +37,7 @@
             <img class="d-lg-block w-100 h-100" src="../img/login-image.jpg" alt="Clínica Veterinaria Huellitas">
         </div>
     </main>
-    <footer class="login-footer h-auto py-3 px-2 text-pretty rounded text-lg-center">
+    <footer class="login-footer h-auto py-3 px-2 text-pretty rounded text-lg-center bg-cream-color">
         <p> © 2026 Clínica Veterinaria Huellitas - Sistema de Gestión Interna</p>
     </footer>
 </body>
