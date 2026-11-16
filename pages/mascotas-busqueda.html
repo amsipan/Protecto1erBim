@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Búsqueda de Mascotas</title>
+</head>
+<body class="bg-secondary-color hdv-100 d-flex flex-column justify-content-between">
+    <header class="title-xl d-flex flex-column justify-content-between aling-items-center p-2 gap-3 flex-lg-row bg-lg-cream-color">
+        <div class="d-flex gap-1 justify-content-center aling-items-center terciary-color">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-paw-print preview-icon" aria-hidden="true"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></svg>
+            <h2>Huellitas</h2>
+        </div>
+        <nav class="d-flex aling-items-center gap-2" aria-label="Navegación de la página">
+            <a href="mascotas-listado.html" class="menu-button d-flex aling-items-center justify-content-center gap-1 rounded p-1 bd-card-area bd-grey-color bg-cream-color parrafo text-color a-decoration-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6-6 6 6 6M3 12h18"/></svg>
+                Regresar
+            </a>
+            <a href="../index.html" class="cerrar-sesion menu-button rounded p-1 bg-grey-color parrafo text-color text-center a-decoration-none">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <main class="p-2 p-lg-3 flex-grow-1 d-flex flex-column gap-3">
+        <h1 class="title-xl text-lg-center">Gestión de Mascotas</h1>
+
+        <form action="mascotas-busqueda.html" method="get" role="search" aria-label="Buscar mascotas por nombre" class="d-flex flex-column flex-lg-row gap-2 aling-items-lg-center">
+            <div class="d-flex flex-column gap-1 flex-grow-1">
+                <input id="buscar_mascota" name="nombre" type="search" required value="Max" placeholder="Buscar por nombre de la mascota" aria-label="Nombre de la mascota" class="w-100 rounded">
+                <span class="span"></span>
+            </div>
+            <div class="d-flex gap-2">
+                <button type="submit" class="menu-button bd-none rounded p-1 bg-terciary-color secondary-color parrafo flex-grow-1">Buscar</button>
+                <a href="mascotas-listado.html" class="menu-button rounded p-1 bg-grey-color text-color text-center parrafo a-decoration-none flex-grow-1">Limpiar Criterios</a>
+            </div>
+            <a href="mascotas-nueva.html" class="menu-button d-flex justify-content-center aling-items-center gap-1 rounded p-1 bg-terciary-color secondary-color text-center parrafo a-decoration-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5v14"/></svg>
+                Nueva Mascota
+            </a>
+        </form>
+
+        <section aria-label="Resultados de la búsqueda de mascotas" class="d-flex flex-column gap-1">
+            <p id="mascotas_total" class="span">1 resultado para «Max»</p>
+            <article class="d-flex flex-column flex-lg-row bg-cream-color rounded bd-card-area bd-grey-color" aria-label="Max, perro macho de María Belén Espinoza">
+                <table class="w-100" aria-label="Mascota encontrada" aria-describedby="mascotas_total">
+                    <thead class="bg-grey-color">
+                        <tr>
+                            <th scope="col" class="d-none d-lg-table-cell p-1"><abbr title="Número">N.º</abbr></th>
+                            <th scope="col" class="p-1 span">Nombre</th>
+                            <th scope="col" class="p-1 span">Especie</th>
+                            <th scope="col" class="p-1 span">Sexo</th>
+                            <th scope="col" class="p-1 span">Nombres del dueño</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="d-none d-lg-table-cell p-1">1</td>
+                            <td class="p-1 span">Max</td>
+                            <td class="p-1 span">Perro</td>
+                            <td class="p-1 span">Macho</td>
+                            <td class="p-1 span">María Belén Espinoza</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="d-flex flex-column">
+                    <h2 class="d-none d-lg-block parrafo text-center p-1 bg-grey-color">Acciones</h2>
+                    <nav class="d-flex gap-1 p-1" aria-label="Acciones para Max de María Belén Espinoza">
+                        <a href="mascotas-detalle.html?mascota_id=1" class="btn-icon menu-button primary-color bg-cream-color flex-grow-1 justify-content-center a-decoration-none" aria-label="Ver detalle de Max">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg>
+                        </a>
+                        <a href="mascotas-editar.html?mascota_id=1" class="btn-icon menu-button terciary-color bg-cream-color flex-grow-1 justify-content-center a-decoration-none" aria-label="Editar a Max">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 3 5 5-12 12-6 1 1-6Z"/><path d="m14 5 5 5"/></svg>
+                        </a>
+                        <a href="mascotas-eliminar.html?mascota_id=1" class="btn-icon warning-button warning-color bg-cream-color flex-grow-1 justify-content-center a-decoration-none" aria-label="Eliminar a Max">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7M14 10v7"/></svg>
+                        </a>
+                    </nav>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="p-3">
+        <p>© 2026 Clínica Veterinaria Huellitas - Sistema de Gestión Interna</p>
+    </footer>
+</body>
+</html>
