@@ -380,3 +380,18 @@ select:active {
 
     .cell-actions { white-space: nowrap; }
 }
+
+/* ===== Pantallas de Jhonatan ===== */
+/* Encabezados de fila (th scope="row") dentro de las tarjetas .table en móvil:
+   el navegador centra los th por defecto. */
+.text-left { text-align: left; }
+
+@media (min-width: 1024px) {
+    /* Textos que solo se muestran en móvil o solo en escritorio dentro de una misma línea */
+    .d-lg-none   { display: none;   }
+    .d-lg-inline { display: inline; }
+
+    /* El caption de .table: bloque a lo ancho en móvil (la tabla es display:block)
+       y título de tabla normal en escritorio. */
+    .d-lg-table-caption { display: table-caption; }
+}

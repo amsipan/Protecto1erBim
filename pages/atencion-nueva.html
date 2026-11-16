@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VetCare: registro de la atención médica de una mascota con diagnóstico, tratamiento y peso.">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Registrar atención médica | VetCare – Clínica Veterinaria Huellitas</title>
+</head>
+<body class="bg-secondary-color hdv-100 d-flex flex-column justify-content-between">
+    <header class="title-xl d-flex flex-column justify-content-between aling-items-center p-2 gap-3 flex-lg-row bg-lg-cream-color">
+        <div class="d-flex gap-1 justify-content-center aling-items-center terciary-color">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></svg>
+            <h2>Huellitas</h2>
+        </div>
+        <div class="header-options text-color d-flex flex-column flex-lg-row gap-2 justify-content-center aling-items-center w-lg-25">
+            <select name="roles" id="roles" class="w-100 w-lg-50 rounded p-1" aria-label="Rol de usuario">
+                <option value="recepcionista">Recepcionista</option>
+                <option value="veterinario" selected>Veterinario</option>
+                <option value="administrador">Administrador</option>
+            </select>
+            <a href="../index.html" class="cerrar-sesion menu-button w-50 w-lg-50 rounded p-1 aling-self-end bd-none bg-grey-color parrafo text-color text-center a-decoration-none">Cerrar sesión</a>
+        </div>
+    </header>
+
+    <main class="p-1 aling-self-lg-center w-lg-75">
+        <section class="d-flex flex-column gap-3" aria-labelledby="titulo-atencion">
+
+            <header class="d-flex flex-column">
+                <h1 id="titulo-atencion" class="title-xl text-center">Registrar atención médica</h1>
+                <p class="parrafo text-center">Ingrese el diagnóstico, el tratamiento y el peso de la mascota.</p>
+            </header>
+
+            <!-- CU-07: datos de la cita y de la mascota solo como información de consulta -->
+            <section class="d-flex flex-column gap-2 p-2 rounded bd-card-area bg-cream-color" aria-labelledby="titulo-datos-cita">
+                <h2 id="titulo-datos-cita" class="subtitle d-flex aling-items-center gap-2">
+                    <span>Datos<span class="d-none d-lg-inline"> de la cita y de la mascota</span></span>
+                    <span class="span rounded p-1 bg-grey-color text-color">Solo lectura</span>
+                </h2>
+
+                <dl class="form-propietario d-flex flex-column gap-2 d-lg-grid">
+                    <div class="d-flex flex-column gap-1">
+                        <dt class="span terciary-color title-bold">Fecha</dt>
+                        <dd class="parrafo rounded p-1 bg-grey-color"><time datetime="2026-11-14">2026-11-14</time></dd>
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                        <dt class="span terciary-color title-bold">Hora</dt>
+                        <dd class="parrafo rounded p-1 bg-grey-color"><time datetime="09:00">09:00</time></dd>
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                        <dt class="span terciary-color title-bold">Servicio</dt>
+                        <dd class="parrafo rounded p-1 bg-grey-color">Consulta general</dd>
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                        <dt class="span terciary-color title-bold">Veterinario</dt>
+                        <dd class="parrafo rounded p-1 bg-grey-color">Dra. Ana Torres</dd>
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                        <dt class="span terciary-color title-bold">Mascota</dt>
+                        <dd class="parrafo rounded p-1 bg-grey-color">Max</dd>
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                        <dt class="span terciary-color title-bold">Especie / Raza</dt>
+                        <dd class="parrafo rounded p-1 bg-grey-color">Perro · Labrador</dd>
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                        <dt class="span terciary-color title-bold">Edad</dt>
+                        <dd class="parrafo rounded p-1 bg-grey-color">4 años</dd>
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                        <dt class="span terciary-color title-bold">Propietario</dt>
+                        <dd class="parrafo rounded p-1 bg-grey-color">Jorge Salazar Ortiz</dd>
+                    </div>
+                </dl>
+            </section>
+
+            <!-- CU-07 pasos 5 a 9: al guardar, regresa a la agenda del día -->
+            <form action="agenda-dia.html" method="get">
+                <fieldset class="form-propietario d-flex flex-column gap-2 p-2 rounded d-lg-grid">
+                    <legend>Atención médica</legend>
+
+                    <div class="d-flex flex-column gap-1">
+                        <label for="diagnostico">
+                            Diagnóstico <span class="warning-color" aria-hidden="true">*</span>
+                        </label>
+                        <textarea id="diagnostico" name="diagnostico" rows="4" required
+                                  placeholder="Ej.: Otitis externa en oído derecho. Leve enrojecimiento y secreción."
+                                  class="w-100 p-1 rounded bd-grey-color"></textarea>
+                    </div>
+
+                    <div class="d-flex flex-column gap-1">
+                        <label for="tratamiento">
+                            Tratamiento <span class="warning-color" aria-hidden="true">*</span>
+                        </label>
+                        <textarea id="tratamiento" name="tratamiento" rows="4" required
+                                  placeholder="Ej.: Limpieza ótica diaria por 7 días. Gotas Otomax 4 gotas c/12 h. Control en 10 días."
+                                  class="w-100 p-1 rounded bd-grey-color"></textarea>
+                    </div>
+
+                    <div class="d-flex flex-column gap-1">
+                        <label for="peso">
+                            Peso (kg) <span class="warning-color" aria-hidden="true">*</span>
+                        </label>
+                        <input type="number" id="peso" name="peso"
+                               min="0.1" max="120" step="0.1" required
+                               inputmode="decimal" placeholder="28.5"
+                               title="Ingrese un peso entre 0.1 y 120 kg, con un decimal"
+                               class="w-100" aria-describedby="ayuda-peso">
+                        <span class="span"></span>
+                        <small id="ayuda-peso" class="span terciary-color">Entre 0.1 y 120 kg</small>
+                    </div>
+
+                    <div class="d-flex flex-column gap-2 mt-2 flex-lg-row justify-content-lg-center grid-lg-full-width">
+                        <button type="submit" class="menu-button bd-none rounded p-2 bg-terciary-color secondary-color parrafo w-lg-25">Guardar atención</button>
+                        <a class="bg-grey-color a-decoration-none text-color p-2 text-center rounded w-lg-25" href="agenda-dia.html">Cancelar</a>
+                    </div>
+                </fieldset>
+            </form>
+
+        </section>
+    </main>
+
+    <footer class="p-3">
+        <p>© 2026 Clínica Veterinaria Huellitas - Sistema de Gestión Interna</p>
+    </footer>
+</body>
+</html>
