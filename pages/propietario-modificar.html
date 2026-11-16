@@ -26,7 +26,7 @@
             <h1 class="title">Modificar Propietario</h1>
             <p class="parrafo">Actualice la información del propietario</p>
         </div>
-        <form action="propietario-listar.html">
+        <form action="propietarios-listar.html">
             <fieldset class="form-propietario d-flex flex-column gap-2 p-2 rounded d-lg-grid">
                 <legend>Datos del propietario</legend>
 
@@ -50,7 +50,7 @@
 
                 <div class="d-flex flex-column gap-1">
                     <label for="telefono">Teléfono de Contacto <span class="warning-color">*</span></label>
-                    <input id="telefono" type="tel" required minlength="10" maxlength="10" pattern="09[0-9]{8}" placeholder="0999999999" value="0987654321">
+                    <input id="telefono" type="tel" required minlength="10" maxlength="10" pattern="09[0-9]{8}" placeholder="0999999999" value="0987654321" title="Debe contener 10 dígitos numéricos e iniciar con 09">
                     <span class="span terciary-color"> Debe contener 10 dígitos e inicar con 09 </span>
                 </div>
 
@@ -61,8 +61,8 @@
                 </div>
 
                 <div class="d-flex flex-column gap-2 mt-2 flex-lg-row justify-content-lg-center grid-lg-full-width">
-                    <button type="submit" class="menu-button bd-none rounded p-2 bg-terciary-color secondary-color parrafo w-lg-25">Registrar</button>
-                    <a class="bg-grey-color a-decoration-none text-color p-2 text-center rounded w-lg-25" href="propietario-listar.html">Cancelar</a>
+                    <button type="submit" class="menu-button bd-none rounded p-2 bg-terciary-color secondary-color parrafo w-lg-25">Guardar</button>
+                    <a class="bg-grey-color a-decoration-none text-color p-2 text-center rounded w-lg-25" href="propietarios-listar.html">Cancelar</a>
                 </div>
             </fieldset>
         </form>

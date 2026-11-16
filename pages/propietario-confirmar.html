@@ -30,10 +30,10 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-exclamation-point preview-icon warning-svg warning-color"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> 
             <p class="text-pretty">
                 ¿Está seguro de que desea eliminar este propietario? 
-                <span class="title-bold">Está acción no se puede deshacer.</span>
+                <span class="title-bold">Está acción no se puede deshacer. Se eliminarían también las mascotas asociadas al propietario y sus citas en caso de existir</span>
             </p>
         </div>
-        <form action="propietario-listar.html">
+        <form action="propietarios-listar.html">
             <fieldset class="form-propietario d-flex flex-column gap-2 p-2 rounded d-lg-grid">
                 <legend>Datos del propietario</legend>
 
@@ -69,7 +69,7 @@
 
                 <div class="d-flex flex-column gap-2 mt-2 flex-lg-row justify-content-lg-center grid-lg-full-width">
                     <button type="submit" class="warning-button bd-none rounded p-2 bg-warning-color secondary-color parrafo w-lg-25">Eliminar</button>
-                    <a class="bg-grey-color a-decoration-none text-color p-2 text-center rounded w-lg-25" href="propietario-listar.html">Cancelar</a>
+                    <a class="bg-grey-color a-decoration-none text-color p-2 text-center rounded w-lg-25" href="propietarios-listar.html">Cancelar</a>
                 </div>
             </fieldset>
         </form>
