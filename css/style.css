@@ -260,6 +260,16 @@ input[type="email"]:not(:placeholder-shown) + span::before {
     color: var(--warning-color);
 }
 
+input[type="password"]:placeholder-shown + span::before {
+    content: "Contraseña incorrecta";
+    color: var(--warning-color);
+}
+
+input[type="email"]:not(:placeholder-shown) + span::before {
+    content: " ";
+    color: var(--warning-color);
+}
+
 input:placeholder-shown + span::before {
     content: "El campo no puede estar vacio";
     color: var(--warning-color);
