@@ -238,6 +238,8 @@ div input:read-only{
 
 div input:valid     {       outline: 2px solid var(--primary-color);    }
 div input:invalid   {       outline: 2px solid var(--warning-color);    }
+textarea:required:placeholder-shown             {   outline: 2px solid var(--warning-color);    }
+textarea:required:not(:placeholder-shown)       {   outline: 2px solid var(--primary-color);    }
 
 div input:focus-visible,
 div select:focus-visible,
@@ -253,6 +255,21 @@ input[type="search"]:placeholder-shown + span::before {
 
 input[type="search"]:not(:placeholder-shown) + span::before {
     content: " ";
+    color: var(--warning-color);
+}
+
+input[type="text"]:placeholder-shown + span::before {
+    content: "Búsqueda no debe ser vacía";
+    color: var(--warning-color);
+}
+
+input[type="text"]:not(:placeholder-shown) + span::before {
+    content: " ";
+    color: var(--warning-color);
+}
+
+input[type="date"]:required + span::before {
+    content: "Fecha no debe ser vacía";
     color: var(--warning-color);
 }
 
@@ -285,6 +302,22 @@ input:not(:placeholder-shown) + span::before {
     content: " ";
     color: var(--warning-color);
 }
+
+textarea:required:placeholder-shown + span::before{   
+    content: "El campo no puede estar vacío";
+    color: var(--warning-color);   
+}
+
+textarea:required:not(:placeholder-shown) + span::before{   
+    content: " ";
+    color: var(--warning-color);    
+}
+
+select:required + span::before{   
+    content: "El campo no puede estar vacío";
+    color: var(--warning-color);   
+}
+
 
 /* Anchore visited */
 .olvido-contraseña:visited {
