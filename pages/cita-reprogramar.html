@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VetCare: reprogramación de la fecha y hora de una cita de la clínica veterinaria Huellitas.">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Reprogramar cita | VetCare – Clínica Veterinaria Huellitas</title>
+</head>
+<body class="bg-secondary-color hdv-100 d-flex flex-column justify-content-between">
+    <header class="title-xl d-flex flex-column justify-content-between aling-items-center p-2 gap-3 flex-lg-row bg-lg-cream-color">
+        <div class="d-flex gap-1 justify-content-center aling-items-center terciary-color">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></svg>
+            <h2>Huellitas</h2>
+        </div>
+        <div class="header-options text-color d-flex flex-column flex-lg-row gap-2 justify-content-center aling-items-center w-lg-25">
+            <select name="roles" id="roles" class="w-100 w-lg-50 rounded p-1" aria-label="Rol de usuario">
+                <option value="recepcionista" selected>Recepcionista</option>
+                <option value="veterinario">Veterinario</option>
+                <option value="administrador">Administrador</option>
+            </select>
+            <a href="../index.html" class="cerrar-sesion menu-button w-50 w-lg-50 rounded p-1 aling-self-end bd-none bg-grey-color parrafo text-color text-center a-decoration-none">Cerrar sesión</a>
+        </div>
+    </header>
+
+    <main class="p-1 aling-self-lg-center w-lg-75">
+        <section aria-labelledby="titulo-reprogramar">
+
+            <header class="d-flex flex-column gap-2 mb-3">
+                <h1 id="titulo-reprogramar" class="title-xl text-center">Reprogramar Cita</h1>
+                <p class="parrafo text-center">Solo puede modificar la fecha y la hora de la cita.</p>
+
+                <p class="d-flex flex-column flex-lg-row justify-content-center aling-items-center gap-2 parrafo">
+                    <span class="rounded p-1 bg-grey-color">
+                        Cita actual:
+                        <strong><time datetime="2026-11-18T10:30">2026-11-18 · 10:30</time></strong>
+                    </span>
+                    <span class="rounded p-1 bg-cream-color bd-card-area">
+                        <span aria-hidden="true">→</span> Nueva:
+                        <strong><time datetime="2026-11-20T15:00">2026-11-20 · 15:00</time></strong>
+                    </span>
+                </p>
+            </header>
+
+            <form action="citas-listar.html" method="get">
+                <fieldset class="form-propietario d-flex flex-column gap-2 p-2 rounded d-lg-grid">
+                    <legend>Datos de la Cita</legend>
+
+                    <!-- Datos de consulta: no se modifican en esta pantalla -->
+                    <div class="d-flex flex-column gap-1">
+                        <label for="propietario">Propietario</label>
+                        <input type="text" id="propietario" name="propietario"
+                               value="María Belén Espinoza Castro" readonly
+                               class="bg-grey-color" aria-describedby="ayuda-propietario">
+                        <span class="span"></span>
+                        <small id="ayuda-propietario" class="span terciary-color">Cédula 1712345678</small>
+                    </div>
+
+                    <div class="d-flex flex-column gap-1">
+                        <label for="mascota">Mascota</label>
+                        <input type="text" id="mascota" name="mascota"
+                               value="Max (Perro)" readonly
+                               class="bg-grey-color" aria-describedby="ayuda-mascota">
+                        <span class="span"></span>
+                        <small id="ayuda-mascota" class="span terciary-color">Mascotas del propietario seleccionado</small>
+                    </div>
+
+                    <div class="d-flex flex-column gap-1">
+                        <label for="servicio">Servicio</label>
+                        <input type="text" id="servicio" name="servicio"
+                               value="Consulta general" readonly class="bg-grey-color">
+                        <span class="span"></span>
+                    </div>
+
+                    <div class="d-flex flex-column gap-1">
+                        <label for="veterinario">Veterinario</label>
+                        <input type="text" id="veterinario" name="veterinario"
+                               value="Dra. Ana Torres" readonly class="bg-grey-color">
+                        <span class="span"></span>
+                    </div>
+
+                    <!-- Datos editables: nueva fecha y hora -->
+                    <div class="d-flex flex-column gap-1">
+                        <label for="fecha">
+                            Fecha <span class="warning-color" aria-hidden="true">*</span>
+                            <span class="span title-bold rounded p-1 bg-primary-color secondary-color">Nueva</span>
+                        </label>
+                        <input type="date" id="fecha" name="fecha"
+                               value="2026-11-20" min="2026-11-15" required
+                               title="Seleccione una fecha desde hoy, de lunes a sábado"
+                               aria-describedby="ayuda-fecha">
+                        <span class="span"></span>
+                        <small id="ayuda-fecha" class="span terciary-color">Lunes a sábado, desde hoy</small>
+                    </div>
+
+                    <div class="d-flex flex-column gap-1">
+                        <label for="hora">
+                            Hora <span class="warning-color" aria-hidden="true">*</span>
+                            <span class="span title-bold rounded p-1 bg-primary-color secondary-color">Nueva</span>
+                        </label>
+                        <input type="time" id="hora" name="hora"
+                               value="15:00" min="08:00" max="18:00" step="1800" required
+                               title="Seleccione una hora entre 08:00 y 18:00 en bloques de 30 minutos"
+                               aria-describedby="ayuda-hora">
+                        <span class="span"></span>
+                        <small id="ayuda-hora" class="span terciary-color">08:00 – 18:00, cada 30 min</small>
+                    </div>
+
+                    <div class="d-flex flex-column gap-2 mt-2 flex-lg-row justify-content-lg-center grid-lg-full-width">
+                        <button type="submit" class="menu-button bd-none rounded p-2 bg-terciary-color secondary-color parrafo w-lg-25">Guardar cambios</button>
+                        <a class="bg-grey-color a-decoration-none text-color p-2 text-center rounded w-lg-25" href="citas-listar.html">Volver al listado</a>
+                    </div>
+                </fieldset>
+            </form>
+
+        </section>
+    </main>
+
+    <footer class="p-3">
+        <p>© 2026 Clínica Veterinaria Huellitas - Sistema de Gestión Interna</p>
+    </footer>
+</body>
+</html>
