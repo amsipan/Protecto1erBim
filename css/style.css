@@ -247,7 +247,7 @@ div textarea:focus-visible {
 }
 
 input[type="search"]:placeholder-shown + span::before {
-    content: "Busqueda no debe ser vacia";
+    content: "Búsqueda no debe ser vacía";
     color: var(--warning-color);
 }
 
@@ -277,7 +277,7 @@ input[type="email"]:not(:placeholder-shown) + span::before {
 }
 
 input:placeholder-shown + span::before {
-    content: "El campo no puede estar vacio";
+    content: "El campo no puede estar vacío";
     color: var(--warning-color);
 }
 
