@@ -250,6 +250,16 @@ input[type="search"]:not(:placeholder-shown) + span::before {
     color: var(--warning-color);
 }
 
+input[type="email"]:placeholder-shown + span::before {
+    content: "Debe ser un email válido como: ejemplo@correo.com";
+    color: var(--warning-color);
+}
+
+input[type="email"]:not(:placeholder-shown) + span::before {
+    content: " ";
+    color: var(--warning-color);
+}
+
 input:placeholder-shown + span::before {
     content: "El campo no puede estar vacio";
     color: var(--warning-color);
