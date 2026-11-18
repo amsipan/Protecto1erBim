@@ -16,6 +16,6 @@
 | Integrante | Trabajo realizado |
 | --- | --- |
 | Velky Jibaja | Inicio de sesión, recuperación de contraseña, panel de recepcionista, gestión de propietarios y estilos generales. |
-| Jorge Oviedo | Gestión de mascotas, registro y listado de citas. |
+| Jorge Oviedo | Gestión de mascotas, registro y listado de citas, Casos de Uso. |
 | Oscar Tamayo | Panel de administrador, gestión de veterinarios y servicios. |
 | Jhonatan Torres | Panel de veterinario, agenda del día, registro de atención médica, historial clínico, búsqueda de propietarios, cancelación y reprogramación de citas. |
