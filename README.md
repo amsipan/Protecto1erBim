@@ -9,7 +9,7 @@
 
 ## GitHub Pages
 
-[Ver el proyecto](https://amsipan.github.io/Protecto1erBim/index.html)
+[Ver el proyecto](https://amsipan.github.io/Proyecto1erBim/index.html)
 
 ## Reparto del trabajo
 
