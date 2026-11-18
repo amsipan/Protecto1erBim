@@ -15,7 +15,7 @@
 
 | Integrante | Trabajo realizado |
 | --- | --- |
-| Velky Jibaja | Inicio de sesión, recuperación de contraseña, panel de recepcionista, gestión de propietarios y estilos generales. |
+| Velky Jibaja | Inicio de sesión, recuperación de contraseña, panel de recepcionista, gestión de propietarios y estilos generales, Casos de Uso. |
 | Jorge Oviedo | Gestión de mascotas, registro y listado de citas, Casos de Uso. |
-| Oscar Tamayo | Panel de administrador, gestión de veterinarios y servicios. |
-| Jhonatan Torres | Panel de veterinario, agenda del día, registro de atención médica, historial clínico, búsqueda de propietarios, cancelación y reprogramación de citas. |
+| Oscar Tamayo | Panel de administrador, gestión de veterinarios y servicios. Diagrama CUs|
+| Jhonatan Torres | Panel de veterinario, agenda del día, registro de atención médica, historial clínico, búsqueda de propietarios, cancelación y reprogramación de citas. Mapa Navegacional|
