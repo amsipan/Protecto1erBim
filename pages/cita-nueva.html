@@ -27,7 +27,7 @@
 
                 <div class="d-flex flex-column gap-1">
                     <label for="propietario">Propietario <span class="warning-color">*</span></label>
-                    <select id="propietario" name="propietario_id" required class="w-100 rounded p-1 bg-cream-color" aria-describedby="propietario-ayuda">
+                    <select id="propietario" name="propietario_id" required class="w-100 rounded p-1 bg-cream-color" aria-describedby="propietario-ayuda" title="Seleccionar propietario">
                         <option value="" selected disabled>Seleccione un propietario</option>
                         <option value="1712345678">María Belén Espinoza Castro</option>
                     </select>
@@ -37,7 +37,7 @@
 
                 <div class="d-flex flex-column gap-1">
                     <label for="mascota">Mascota <span class="warning-color">*</span></label>
-                    <select id="mascota" name="mascota_id" required class="w-100 rounded p-1 bg-cream-color" aria-describedby="mascota-ayuda">
+                    <select id="mascota" name="mascota_id" required class="w-100 rounded p-1 bg-cream-color" aria-describedby="mascota-ayuda" title="Seleccionar mascota">
                         <option value="" selected disabled>Seleccione una mascota</option>
                         <option value="1">Max (Perro)</option>
                     </select>
@@ -47,34 +47,36 @@
 
                 <div class="d-flex flex-column gap-1">
                     <label for="servicio">Servicio <span class="warning-color">*</span></label>
-                    <select id="servicio" name="servicio_id" required class="w-100 rounded p-1 bg-cream-color">
+                    <select id="servicio" name="servicio_id" required class="w-100 rounded p-1 bg-cream-color" title="Seleccionar servicio">
                         <option value="" selected disabled>Seleccione un servicio</option>
                         <option value="1">Consulta general</option>
                         <option value="2">Vacunación</option>
                         <option value="3">Desparasitación</option>
                     </select>
                     <span class="span"></span>
+                    <span class="span terciary-color">Seleccione un servicio para la mascota.</span>
                 </div>
 
                 <div class="d-flex flex-column gap-1">
                     <label for="veterinario">Veterinario <span class="warning-color">*</span></label>
-                    <select id="veterinario" name="veterinario_id" required class="w-100 rounded p-1 bg-cream-color">
+                    <select id="veterinario" name="veterinario_id" required class="w-100 rounded p-1 bg-cream-color" title="Seleccionar veterinario">
                         <option value="" selected disabled>Seleccione un veterinario</option>
                         <option value="1">Dra. Ana Torres</option>
                     </select>
                     <span class="span"></span>
+                    <span class="span terciary-color">Seleccione el veterinario que atenderá a la mascota.</span>
                 </div>
 
                 <div class="d-flex gap-2 grid-lg-full-width">
                     <div class="d-flex flex-column gap-1 w-50">
                         <label for="fecha">Fecha <span class="warning-color">*</span></label>
-                        <input id="fecha" name="fecha" type="date" required min="2026-11-15" class="w-100 rounded" aria-describedby="fecha-ayuda">
+                        <input id="fecha" name="fecha" type="date" required min="2026-11-15" class="w-100 rounded" aria-describedby="fecha-ayuda" title="Fecha de la cita">
                         <span class="span"></span>
                         <span id="fecha-ayuda" class="span terciary-color">Lunes a sábado, desde hoy.</span>
                     </div>
                     <div class="d-flex flex-column gap-1 w-50">
                         <label for="hora">Hora <span class="warning-color">*</span></label>
-                        <select id="hora" name="hora" required class="w-100 rounded p-1 bg-cream-color" aria-describedby="hora-ayuda">
+                        <select id="hora" name="hora" required class="w-100 rounded p-1 bg-cream-color" aria-describedby="hora-ayuda" title="Hora de la cita">
                             <option value="" selected disabled>Seleccione una hora</option>
                             <option value="08:00">08:00</option>
                             <option value="08:30">08:30</option>
@@ -105,7 +107,7 @@
 
                 <div class="d-flex flex-column gap-2 mt-2 flex-lg-row justify-content-lg-center grid-lg-full-width">
                     <button type="submit" class="menu-button bd-none rounded p-2 bg-terciary-color secondary-color parrafo w-lg-25">Guardar cita</button>
-                    <a href="citas-listar.html" class="bg-grey-color a-decoration-none text-color p-2 text-center rounded w-lg-25">Cancelar</a>
+                    <a href="citas-listar.html" class="menu-button bg-grey-color a-decoration-none text-color p-2 text-center rounded w-lg-25">Cancelar</a>
                 </div>
             </fieldset>
         </form>
