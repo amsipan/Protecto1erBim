@@ -33,35 +33,35 @@
 
                 <dl class="form-propietario d-flex flex-column gap-2 d-lg-grid">
                     <div class="d-flex flex-column gap-1">
-                        <dt class="span terciary-color title-bold">Fecha</dt>
+                        <dt class="span terciary-color title-bold" title="Campo de solo lectura">Fecha</dt>
                         <dd class="parrafo rounded p-1 bg-grey-color"><time datetime="2026-11-14">2026-11-14</time></dd>
                     </div>
                     <div class="d-flex flex-column gap-1">
-                        <dt class="span terciary-color title-bold">Hora</dt>
+                        <dt class="span terciary-color title-bold" title="Campo de solo lectura">Hora</dt>
                         <dd class="parrafo rounded p-1 bg-grey-color"><time datetime="09:00">09:00</time></dd>
                     </div>
                     <div class="d-flex flex-column gap-1">
-                        <dt class="span terciary-color title-bold">Servicio</dt>
+                        <dt class="span terciary-color title-bold" title="Campo de solo lectura">Servicio</dt>
                         <dd class="parrafo rounded p-1 bg-grey-color">Consulta general</dd>
                     </div>
                     <div class="d-flex flex-column gap-1">
-                        <dt class="span terciary-color title-bold">Veterinario</dt>
+                        <dt class="span terciary-color title-bold" title="Campo de solo lectura">Veterinario</dt>
                         <dd class="parrafo rounded p-1 bg-grey-color">Dra. Ana Torres</dd>
                     </div>
                     <div class="d-flex flex-column gap-1">
-                        <dt class="span terciary-color title-bold">Mascota</dt>
+                        <dt class="span terciary-color title-bold" title="Campo de solo lectura">Mascota</dt>
                         <dd class="parrafo rounded p-1 bg-grey-color">Max</dd>
                     </div>
                     <div class="d-flex flex-column gap-1">
-                        <dt class="span terciary-color title-bold">Especie / Raza</dt>
+                        <dt class="span terciary-color title-bold" title="Campo de solo lectura">Especie / Raza</dt>
                         <dd class="parrafo rounded p-1 bg-grey-color">Perro · Labrador</dd>
                     </div>
                     <div class="d-flex flex-column gap-1">
-                        <dt class="span terciary-color title-bold">Edad</dt>
+                        <dt class="span terciary-color title-bold" title="Campo de solo lectura">Edad</dt>
                         <dd class="parrafo rounded p-1 bg-grey-color">4 años</dd>
                     </div>
                     <div class="d-flex flex-column gap-1">
-                        <dt class="span terciary-color title-bold">Propietario</dt>
+                        <dt class="span terciary-color title-bold" title="Campo de solo lectura">Propietario</dt>
                         <dd class="parrafo rounded p-1 bg-grey-color">Jorge Salazar Ortiz</dd>
                     </div>
                 </dl>
@@ -78,6 +78,7 @@
                         </label>
                         <textarea id="diagnostico" name="diagnostico" rows="4" required
                                   placeholder="Ej.: Otitis externa en oído derecho. Leve enrojecimiento y secreción."
+                                  title="Diagnóstico de la cita"
                                   class="w-100 p-1 rounded bd-grey-color"></textarea>
                         <span class="span"></span>
                     </div>
@@ -88,6 +89,7 @@
                         </label>
                         <textarea id="tratamiento" name="tratamiento" rows="4" required
                                   placeholder="Ej.: Limpieza ótica diaria por 7 días. Gotas Otomax 4 gotas c/12 h. Control en 10 días."
+                                  title="Tratamiento para la mascota"
                                   class="w-100 p-1 rounded bd-grey-color"></textarea>
                                   <span class="span"></span>
                     </div>
@@ -98,11 +100,11 @@
                         </label>
                         <input type="number" id="peso" name="peso"
                                min="0.1" max="120" step="0.1" required
-                               inputmode="decimal" placeholder="28.5"
-                               title="Ingrese un peso entre 0.1 y 120 kg, con un decimal"
+                               inputmode="decimal" placeholder="Ej. 12.5"
+                               title="Peso de la mascota"
                                class="w-100 rounded" aria-describedby="ayuda-peso">
                         <span class="span"></span>
-                        <small id="ayuda-peso" class="span terciary-color">Entre 0.1 y 120 kg</small>
+                        <small id="ayuda-peso" class="span terciary-color">Ingrese un peso entre 0.1 y 120 kg, con un decimal</small>
                     </div>
 
                     <div class="d-flex flex-column gap-2 mt-2 flex-lg-row justify-content-lg-center grid-lg-full-width">

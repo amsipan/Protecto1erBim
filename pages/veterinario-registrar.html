@@ -25,41 +25,41 @@
 
                 <div class="d-flex flex-column gap-1">
                     <label for="cedula">Cédula de Identidad  <span class="warning-color">*</span></label>
-                    <input class="rounded" id="cedula" type="text" required minlength="10" maxlength="10" title="Debe contener 10 dígitos númericos" placeholder="Ej. 1712345678" pattern="[0-9]{10}">
+                    <input class="rounded" id="cedula" type="text" required minlength="10" maxlength="10" title="Cedula de identidad" placeholder="Ej. 1712345678" pattern="[0-9]{10}">
                     <span class="span"></span>
                     <span class="span terciary-color"> 10 dígitos </span>
                 </div>
 
                 <div class="d-flex flex-column gap-1">
                     <label for="telefono">Teléfono celular <span class="warning-color">*</span></label>
-                    <input class="rounded" id="telefono" type="tel" required minlength="10" maxlength="10" pattern="09[0-9]{8}" placeholder="Ej. 0987654321" title="Debe contener 10 dígitos numéricos e iniciar con 09">
+                    <input class="rounded" id="telefono" type="tel" required minlength="10" maxlength="10" pattern="09[0-9]{8}" placeholder="Ej. 0987654321" title="Teléfono de contacto">
                     <span class="span"></span>
                     <span class="span terciary-color"> 10 dígitos, inicia con 09 </span>
                 </div>
 
                 <div class="d-flex flex-column gap-1">
                     <label for="nombres">Nombres  <span class="warning-color">*</span></label>
-                    <input class="rounded" id="nombres" type="text" required minlength="2" maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}" placeholder=" ">
+                    <input class="rounded" id="nombres" type="text" required minlength="2" maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}" placeholder=" " title="Nombre del propietario">
                     <span class="span"></span>
                     <span class="span terciary-color"> Solo letras </span>
                 </div>
 
                 <div class="d-flex flex-column gap-1">
                     <label for="apellidos">Apellidos <span class="warning-color">*</span></label>
-                    <input class="rounded" id="apellidos" type="text" required minlength="2" maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}" placeholder=" ">
+                    <input class="rounded" id="apellidos" type="text" required minlength="2" maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}" placeholder=" " title="Apellido del propietario">
                     <span class="span"></span>
                     <span class="span terciary-color"> Solo letras </span>
                 </div>
 
                 <div class="d-flex flex-column gap-1 grid-lg-full-width">
                     <label for="email">Correo Electrónico <span class="warning-color">*</span></label>
-                    <input class="rounded" id="email" type="email" required placeholder="Ej. a.torres@huellitas.vet">
+                    <input class="rounded" id="email" type="email" required placeholder="Ej. ejemplo@huellitas.vet" title="Email de contacto">
                     <span class="span"></span>
                 </div>
 
                 <div class="d-flex flex-column gap-1 grid-lg-full-width">
                     <label for="direccion">Dirección <span class="warning-color">*</span></label>
-                    <input class="rounded" id="direccion" type="text" required minlength="5" maxlength="150" placeholder="Ej: Av. Amazonas N34-12 y Mariana de Jesús">
+                    <input class="rounded" id="direccion" type="text" required minlength="5" maxlength="150" placeholder="Ej: Av. Amazonas N34-12 y Mariana de Jesús" title="Ubicación">
                     <span class="span"></span>
                 </div>
 

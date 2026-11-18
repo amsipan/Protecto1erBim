@@ -25,21 +25,21 @@
 
                 <div class="d-flex flex-column gap-1">
                     <label for="cedula_prop">Cédula del propietario <span class="warning-color">*</span></label>
-                    <input class=" rounded" id="cedula_prop" name="cedula_propietario" type="text" required minlength="10" maxlength="10" inputmode="numeric" title="Debe contener exactamente 10 dígitos numéricos" placeholder="1712345678" pattern="[0-9]{10}" aria-describedby="cedula-ayuda">
+                    <input class=" rounded" id="cedula_prop" name="cedula_propietario" type="text" required minlength="10" maxlength="10" inputmode="numeric" title="Cédula de identidad" placeholder="Ej. 1712345678" pattern="[0-9]{10}" aria-describedby="cedula-ayuda">
                     <span class="span"></span>
                     <span id="cedula-ayuda" class="span terciary-color">Debe corresponder a un propietario registrado.</span>
                 </div>
 
                 <div class="d-flex flex-column gap-1">
                     <label for="nombre_mascota">Nombre <span class="warning-color">*</span></label>
-                    <input class=" rounded" id="nombre_mascota" name="nombre" type="text" required minlength="2" maxlength="40" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,40}" title="Ingrese de 2 a 40 letras y espacios" placeholder="Nombre de la mascota" aria-describedby="nombre-ayuda">
+                    <input class=" rounded" id="nombre_mascota" name="nombre" type="text" required minlength="2" maxlength="40" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,40}" title="Nombre de la mascota" placeholder="Ej. Max" aria-describedby="nombre-ayuda">
                     <span class="span"></span>
                     <span id="nombre-ayuda" class="span terciary-color">Solo letras. Entre 2 y 40 caracteres.</span>
                 </div>
 
                 <div class="d-flex flex-column gap-1">
                     <label for="especie">Especie <span class="warning-color">*</span></label>
-                    <select id="especie" name="especie" required class="w-100 rounded p-1 bg-cream-color">
+                    <select id="especie" name="especie" required class="w-100 rounded p-1 bg-cream-color" title="Especie de la mascota">
                         <option value="" selected disabled>Seleccione una especie</option>
                         <option value="perro">Perro</option>
                         <option value="gato">Gato</option>
@@ -55,11 +55,11 @@
                         <legend class="mb-1">Sexo <span class="warning-color">*</span></legend>
                         <p class="d-flex aling-items-center gap-2">
                             <label for="sexo_macho" class="d-flex aling-items-center gap-1">
-                                <input class=" rounded"id="sexo_macho" type="radio" name="sexo_mascota" value="macho" required checked>
+                                <input class="rounded"id="sexo_macho" type="radio" name="sexo_mascota" value="macho" required checked title="Sexo de la mascota">
                                 Macho
                             </label>
                             <label for="sexo_hembra" class="d-flex aling-items-center gap-1">
-                                <input class=" rounded" id="sexo_hembra" type="radio" name="sexo_mascota" value="hembra" required>
+                                <input class=" rounded" id="sexo_hembra" type="radio" name="sexo_mascota" value="hembra" required title="Sexo de la mascota">
                                 Hembra
                             </label>
                         </p>
@@ -67,21 +67,22 @@
 
                     <div class="d-flex flex-column gap-1 w-lg-50">
                         <label for="peso">Peso (kg) <span class="warning-color">*</span></label>
-                        <input class=" rounded" id="peso" name="peso" type="number" required min="0.1" max="120" step="0.1" placeholder="Peso en kg" class="w-100" title="Ingrese un peso entre 0.1 y 120 kg, en incrementos de 0.1 kg">
+                        <input class=" rounded" id="peso" name="peso" type="number" required min="0.1" max="120" step="0.1" placeholder="Ej. 12.5" class="w-100"  title="Peso de la mascota">
                         <span class="span"></span>
+                        <span class="span terciary-color">Ingrese un peso entre 0.1 y 120 kg, en incrementos de 0.1 kg.</span>
                     </div>
                 </section>
 
                 <div class="d-flex flex-column gap-1">
                     <label for="fecha_nacimiento">Fecha de nacimiento <span class="warning-color">*</span></label>
-                    <input class=" rounded" id="fecha_nacimiento" name="fecha_nacimiento" type="date" required max="2026-11-15" aria-describedby="fecha-ayuda">
+                    <input class=" rounded" id="fecha_nacimiento" name="fecha_nacimiento" type="date" required max="2026-11-15" aria-describedby="fecha-ayuda" title="Fecha de nacimiento de la mascota">
                     <span class="span"></span>
                     <span id="fecha-ayuda" class="span terciary-color">No puede ser una fecha futura.</span>
                 </div>
 
                 <div class="d-flex flex-column gap-1">
                     <label for="observaciones">Observaciones <span class="span">(opcional)</span></label>
-                    <textarea id="observaciones" name="observaciones" maxlength="300" rows="3" placeholder="Alergias, vacunas o notas adicionales..." class="w-100 p-1 rounded bd-grey-color" aria-describedby="observaciones-ayuda"></textarea>
+                    <textarea id="observaciones" name="observaciones" maxlength="300" rows="3" placeholder="Ej. Alergias, vacunas o notas adicionales..." title="Observaciones de la mascota" class="w-100 p-1 rounded bd-grey-color" aria-describedby="observaciones-ayuda"></textarea>
                     <span id="observaciones-ayuda" class="span terciary-color">Máximo 300 caracteres.</span>
                 </div>
 
